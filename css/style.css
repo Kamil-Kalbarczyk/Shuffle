@@ -5,11 +5,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-    /* background: linear-gradient(to left, red, transparent),
+/* html { */
+/* background: linear-gradient(to left, red, transparent),
         linear-gradient(to right, blue, transparent); */
-    /* background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%); */
-}
+/* background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%); */
+/* } */
 
 body {
     background-color: rgb(240, 240, 240);
@@ -19,12 +19,14 @@ div.wrapper {
     display: flex;
     justify-content: space-around;
     margin: auto;
+    min-height: 100vh;
 }
 
 div.texts {
     padding: 0 40px;
     /* background-color: #f00; */
     align-self: center;
+    width: 50%;
 }
 
 .texts p {
@@ -54,4 +56,87 @@ div.texts {
     color: #fff;
 
     background-color: orange;
+    border-radius: 3px;
+}
+
+div.boxes {
+    width: 50%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "first second"
+        "third fourth";
+    align-content: center;
+    column-gap: 20px;
+    /* row-gap: 10px; */
+    color: darkblue;
+}
+
+div.box {
+    padding: 20px;
+    background-color: #fff;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    border: 1px solid lightgray;
+    border-radius: 2px;
+
+}
+
+div.box h2 {
+    /* font-weight: normal; */
+    font-size: 18px;
+    line-height: 1.5em;
+    padding: 10px 0;
+}
+
+div.box i {
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+}
+
+div.box p {
+    font-size: 14px;
+}
+
+div.box:first-child {
+    grid-area: first;
+    margin-bottom: 20px;
+}
+
+div.box:first-child i {
+    color: darkblue;
+    background-color: rgba(0, 119, 255, 0.199);
+}
+
+div.box:nth-child(2) {
+    grid-area: second;
+}
+
+div.box:nth-child(2) i {
+    color: darkgreen;
+    background-color: lightgreen;
+}
+
+div.box:nth-child(3) {
+    grid-area: third;
+}
+
+div.box:nth-child(3) i {
+    color: orangered;
+    background-color: yellow;
+}
+
+div.box:last-child {
+    grid-area: fourth;
+    margin-top: 20px;
+}
+
+div.box:last-child i {
+    color: darkviolet;
+    background-color: violet;
 }
