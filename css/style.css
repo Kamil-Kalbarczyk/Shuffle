@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    /* background: linear-gradient(to left, red, transparent),
+        linear-gradient(to right, blue, transparent); */
+    /* background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%); */
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+div.wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+div.texts {
+    padding: 0 40px;
+    /* background-color: #f00; */
+    align-self: center;
+}
+
+.texts p {
+    color: gray;
+}
+
+.texts p:first-child {
+    text-transform: uppercase;
+}
+
+.texts h1 {
+    font-weight: normal;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
+.texts h1 span {
+    color: blue;
+}
+
+.texts button {
+    margin-top: 15px;
+    text-transform: uppercase;
+    width: 70px;
+    line-height: 25px;
+    border: none;
+    color: #fff;
+
+    background-color: orange;
+}
