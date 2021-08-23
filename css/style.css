@@ -12,21 +12,28 @@
 /* } */
 
 body {
-    background-color: rgb(240, 240, 240);
+
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
 div.wrapper {
+    background-color: rgb(240, 240, 240);
     display: flex;
     justify-content: space-around;
     margin: auto;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 div.texts {
     padding: 0 40px;
-    /* background-color: #f00; */
     align-self: center;
     width: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .texts p {
@@ -57,6 +64,7 @@ div.texts {
 
     background-color: orange;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 div.boxes {
@@ -70,22 +78,20 @@ div.boxes {
         "third fourth";
     align-content: center;
     column-gap: 20px;
-    /* row-gap: 10px; */
     color: darkblue;
+    margin: 40px 40px 40px 0;
+
 }
 
 div.box {
     padding: 20px;
     background-color: #fff;
-    /* margin-left: 10px;
-    margin-right: 10px; */
     border: 1px solid lightgray;
     border-radius: 2px;
 
 }
 
 div.box h2 {
-    /* font-weight: normal; */
     font-size: 18px;
     line-height: 1.5em;
     padding: 10px 0;
@@ -110,11 +116,12 @@ div.box:first-child {
 
 div.box:first-child i {
     color: darkblue;
-    background-color: rgba(0, 119, 255, 0.199);
+    background-color: rgba(132, 186, 247, 0.199);
 }
 
 div.box:nth-child(2) {
     grid-area: second;
+    margin-top: 20px;
 }
 
 div.box:nth-child(2) i {
@@ -124,6 +131,7 @@ div.box:nth-child(2) i {
 
 div.box:nth-child(3) {
     grid-area: third;
+    margin-bottom: 20px;
 }
 
 div.box:nth-child(3) i {
@@ -139,4 +147,32 @@ div.box:last-child {
 div.box:last-child i {
     color: darkviolet;
     background-color: violet;
+}
+
+
+@media (orientation: portrait) {
+    body {
+        background-color: rgb(240, 240, 240);
+    }
+
+    div.wrapper {
+        flex-direction: column;
+        min-width: auto;
+        position: static;
+        width: 100vw;
+        transform: translate(0, 0);
+    }
+
+    div.boxes {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+
+    }
+
+    div.boxes div.box {
+        min-width: auto;
+        margin: 10px auto;
+    }
 }
